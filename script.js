@@ -121,6 +121,36 @@ function renderDiy(data) {
   });
 }
 
+function renderOnduleurs(data) {
+  const onduleurs = data.onduleurs;
+  if (!onduleurs) return;
+
+  document.getElementById("onduleurs-intro").textContent = onduleurs.intro;
+
+  const body = document.getElementById("onduleurs-body");
+  body.innerHTML = "";
+  const range = (min, max) => (min == null || max == null ? "—" : `${EUR0.format(min)} – ${EUR0.format(max)}`);
+  onduleurs.tiers.forEach((tier) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="power-cell">${tier.label}<br><span style="font-weight: 400; color: var(--ink-soft); font-size: 0.82rem;">${tier.note}</span></td>
+      <td>${range(tier.price_min, tier.price_max)}</td>
+      <td>${range(tier.install_min, tier.install_max)}</td>
+      <td>${range(tier.total_min, tier.total_max)}</td>
+      <td>${tier.warranty}</td>
+    `;
+    body.appendChild(tr);
+  });
+
+  const caveats = document.getElementById("onduleurs-caveats");
+  caveats.innerHTML = "";
+  onduleurs.caveats.forEach((c) => {
+    const li = document.createElement("li");
+    li.textContent = c;
+    caveats.appendChild(li);
+  });
+}
+
 function renderFactors(data) {
   const grid = document.getElementById("factor-grid");
   grid.innerHTML = "";
@@ -213,6 +243,7 @@ async function init() {
     renderHeroStats(data);
     renderTable(data);
     renderDiy(data);
+    renderOnduleurs(data);
     renderFactors(data);
     renderAides(data);
     renderSources(data);
