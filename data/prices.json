@@ -1,0 +1,85 @@
+{
+  "lastUpdated": "2026-09-17",
+  "currency": "EUR",
+  "vatNote": "Prix TTC, TVA à 5,5% incluse, pose comprise",
+  "tiers": [
+    {
+      "power_kwc": 3,
+      "price_min": 6000,
+      "price_max": 10500,
+      "surface_m2_approx": 15
+    },
+    {
+      "power_kwc": 6,
+      "price_min": 9500,
+      "price_max": 17000,
+      "surface_m2_approx": 30
+    },
+    {
+      "power_kwc": 9,
+      "price_min": 13000,
+      "price_max": 24000,
+      "surface_m2_approx": 45
+    }
+  ],
+  "primeAutoconsommation": {
+    "status": "Supprimée pour toute nouvelle demande de raccordement validée par Enedis après le 5 juin 2026 (réforme S21)",
+    "legacyRate_eur_per_kwc": 80,
+    "legacyNote": "80 €/kWc (jusqu'à 9 kWc) pour les dossiers validés avant le 5 juin 2026, garantie 20 ans"
+  },
+  "rachatSurplus": {
+    "rate_c_per_kwh": 1.1,
+    "indexation_annual_pct": 2,
+    "effectiveDate": "2026-06-05",
+    "legacyRate_c_per_kwh": 4,
+    "note": "Depuis le 5 juin 2026 (arrêté S21), le surplus revendu à EDF OA est payé 1,1 c€/kWh HT, indexé 2%/an, contre 4 c€/kWh auparavant. Les demandes validées avant cette date conservent l'ancien tarif pendant 20 ans."
+  },
+  "factors": [
+    {
+      "title": "Origine des panneaux",
+      "detail": "Les panneaux fabriqués en Chine coûtent en moyenne 6 991 € TTC contre 8 050 € TTC pour des panneaux fabriqués en Europe, pour une installation de 3 kWc."
+    },
+    {
+      "title": "Complexité de la toiture",
+      "detail": "Une toiture en pente forte, à plusieurs pans, ou difficile d'accès augmente le temps de pose, la sécurisation du chantier et donc la facture."
+    },
+    {
+      "title": "Taille de l'installation",
+      "detail": "Les frais fixes (pose, raccordement, échafaudage, onduleur) pèsent proportionnellement plus sur les petites installations : le prix au kWc baisse quand la puissance augmente."
+    },
+    {
+      "title": "Région et accès au toit",
+      "detail": "Les tarifs de main d'œuvre et de déplacement varient selon les régions et la disponibilité des installateurs certifiés RGE QualiPV localement."
+    }
+  ],
+  "sources": [
+    {
+      "title": "La Prime Énergie — Prix panneaux solaires 2026",
+      "url": "https://www.laprimeenergie.fr/les-travaux/le-panneau-solaire/prix"
+    },
+    {
+      "title": "Hello Watt — Combien coûte un panneau solaire en 2026 ?",
+      "url": "https://www.hellowatt.fr/panneaux-solaires-photovoltaiques/combien-coute-installation-photovoltaique"
+    },
+    {
+      "title": "Potentiel Solaire — Prix panneaux solaires 2026",
+      "url": "https://www.potentielsolaire.com/prix-panneaux-solaires"
+    },
+    {
+      "title": "EDF Solutions Solaires — Prix 3kWc / 6kWc / 9kWc en 2026",
+      "url": "https://www.edf-solutions-solaires.com/guide-solaire/prix-panneau-solaire-3kwc-6kwc-9kwc/"
+    },
+    {
+      "title": "ScoreSolaire — Prix installation panneaux solaires 2026",
+      "url": "https://scoresolaire.com/prix-installation-solaire/"
+    },
+    {
+      "title": "Hello Watt — Tarifs de rachat EDF OA, le nouveau régime depuis juin 2026",
+      "url": "https://www.hellowatt.fr/panneaux-solaires-photovoltaiques/tarif-rachat-photovoltaique"
+    },
+    {
+      "title": "La Prime Énergie — Tarif rachat photovoltaïque 2026 : prix et primes EDF OA",
+      "url": "https://www.laprimeenergie.fr/les-travaux/les-panneaux-solaires-photovoltaiques/aides/tarif-rachat-edf-oa"
+    }
+  ]
+}
