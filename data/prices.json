@@ -70,6 +70,51 @@
       "Assurance habitation : à vérifier auprès de son assureur, une pose non professionnelle peut ne pas être couverte en cas de sinistre"
     ]
   },
+  "onduleurs": {
+    "intro": "L'onduleur convertit le courant continu produit par les panneaux en courant alternatif utilisable par le logement. Il représente en général 10 à 15% du budget total d'une installation, et c'est souvent la première pièce à remplacer, sa durée de vie étant plus courte que celle des panneaux.",
+    "tiers": [
+      {
+        "label": "Onduleur string (centralisé)",
+        "price_min": 600,
+        "price_max": 2600,
+        "install_min": 400,
+        "install_max": 600,
+        "total_min": 1000,
+        "total_max": 3200,
+        "warranty": "5 à 10 ans (durée de vie 10-15 ans)",
+        "note": "Un seul boîtier pilote toute la chaîne de panneaux : solution la plus économique, mais l'ombrage d'un seul panneau réduit la production de toute la chaîne."
+      },
+      {
+        "label": "Micro-onduleurs (par panneau)",
+        "price_min": 1200,
+        "price_max": 3600,
+        "install_min": 700,
+        "install_max": 1000,
+        "total_min": 1900,
+        "total_max": 4600,
+        "warranty": "20 à 25 ans (durée de vie proche des panneaux)",
+        "note": "Un module par panneau optimise la production individuellement (utile en cas d'ombre partielle ou d'orientations multiples) et facilite le suivi, mais coûte plus cher et complique le remplacement, fixé sous chaque panneau."
+      },
+      {
+        "label": "Onduleur hybride + batterie (stockage 10 kWh)",
+        "price_min": null,
+        "price_max": null,
+        "install_min": null,
+        "install_max": null,
+        "total_min": 6000,
+        "total_max": 10000,
+        "warranty": "10 ans onduleur, 10 à 15 ans batterie",
+        "note": "Solution complète installée (onduleur hybride, batterie et pose), pour stocker le surplus et l'autoconsommer le soir plutôt que le revendre. Prix TTC installé, hors onduleur string/micro-onduleurs déjà comptés ci-dessus."
+      }
+    ],
+    "caveats": [
+      "L'onduleur est presque toujours remplacé au moins une fois pendant la durée de vie d'une installation solaire (25 à 30 ans), contrairement aux panneaux.",
+      "Les onduleurs string coûtent moins cher à l'achat et à la pose, mais toute la chaîne de panneaux perd en production si un seul panneau est ombragé ou encrassé.",
+      "Les micro-onduleurs suppriment cet effet de chaîne et simplifient le monitoring panneau par panneau, au prix d'un surcoût matériel et main d'œuvre.",
+      "Un onduleur hybride est indispensable pour piloter une batterie de stockage ; sans projet de stockage, un onduleur string ou des micro-onduleurs suffisent.",
+      "Marques les plus citées en 2026 : Huawei, Enphase (micro-onduleurs), Fronius et Hoymiles (entrée de gamme, garantie plus courte)."
+    ]
+  },
   "factors": [
     {
       "title": "Origine des panneaux",
@@ -116,6 +161,22 @@
     {
       "title": "La Prime Énergie — Tarif rachat photovoltaïque 2026 : prix et primes EDF OA",
       "url": "https://www.laprimeenergie.fr/les-travaux/les-panneaux-solaires-photovoltaiques/aides/tarif-rachat-edf-oa"
+    },
+    {
+      "title": "Selectra — Onduleur panneau solaire : micro-onduleur, branchement et prix (2026)",
+      "url": "https://selectra.info/energie/solaire/onduleur"
+    },
+    {
+      "title": "Potentiel Solaire — Onduleur solaire : guide complet, prix et marques (2026)",
+      "url": "https://www.potentielsolaire.com/guide-onduleur"
+    },
+    {
+      "title": "Prix Travaux m2 — Prix d'un onduleur photovoltaïque en 2026",
+      "url": "https://www.prix-travaux-m2.com/prix-onduleur-photovoltaique.php"
+    },
+    {
+      "title": "Serena Energy — Prix batterie solaire 2026 : tarifs et coût par kWh",
+      "url": "https://serena-energy.fr/blog/prix-batterie-solaire-2026/"
     }
   ]
 }
