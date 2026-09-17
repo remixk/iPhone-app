@@ -34,6 +34,42 @@
     "legacyRate_c_per_kwh": 4,
     "note": "Depuis le 5 juin 2026 (arrêté S21), le surplus revendu à EDF OA est payé 1,1 c€/kWh HT, indexé 2%/an, contre 4 c€/kWh auparavant. Les demandes validées avant cette date conservent l'ancien tarif pendant 20 ans."
   },
+  "diy": {
+    "intro": "Les kits solaires en autoconsommation vendus sans pose (\"DIY\") coûtent nettement moins cher à l'achat, mais changent les règles du jeu : TVA à 20% au lieu de 5,5%, pas de prime à l'autoconsommation, pas de contrat de rachat EDF OA garanti, et la pose, le raccordement et la conformité électrique restent à la charge du particulier.",
+    "tiers": [
+      {
+        "label": "Kit plug-and-play (balcon / jardin)",
+        "power_kwc": 0.8,
+        "price_min": 400,
+        "price_max": 900,
+        "surface_m2_approx": 4,
+        "note": "Limité à 800 W injectés, branché sur une prise dédiée : ni déclaration Enedis ni Consuel requis dans la plupart des cas."
+      },
+      {
+        "label": "Kit autoconsommation 3 kWc",
+        "power_kwc": 3,
+        "price_min": 2500,
+        "price_max": 4500,
+        "surface_m2_approx": 15,
+        "note": "Pose en toiture, raccordement et attestation Consuel à la charge du particulier."
+      },
+      {
+        "label": "Kit autoconsommation 6 kWc",
+        "power_kwc": 6,
+        "price_min": 4500,
+        "price_max": 8000,
+        "surface_m2_approx": 30,
+        "note": "Pose en toiture, raccordement et attestation Consuel à la charge du particulier."
+      }
+    ],
+    "caveats": [
+      "TVA à 20%, contre 5,5% pour une installation posée par un professionnel RGE",
+      "Non éligible à la prime à l'autoconsommation ni au tarif de rachat EDF OA garanti, réservés aux installations posées par un professionnel certifié RGE QualiPV",
+      "Aucune garantie décennale ni garantie de résultat sur la pose",
+      "Raccordement Enedis, attestation Consuel et conformité NF C 15-100 restent à la charge du particulier au-delà des kits plug-and-play limités à 800 W",
+      "Assurance habitation : à vérifier auprès de son assureur, une pose non professionnelle peut ne pas être couverte en cas de sinistre"
+    ]
+  },
   "factors": [
     {
       "title": "Origine des panneaux",
