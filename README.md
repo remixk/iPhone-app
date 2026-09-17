@@ -2,7 +2,8 @@
 
 Site statique qui compare le prix des panneaux solaires photovoltaïques
 résidentiels en France : fourchettes par puissance (3, 6, 9 kWc),
-simulateur de prix, facteurs qui font varier la facture, et aides /
+simulateur de prix, comparatif des kits DIY (autoconsommation sans pose
+professionnelle), facteurs qui font varier la facture, et aides /
 tarifs de rachat 2026.
 
 ## Lancer le site en local

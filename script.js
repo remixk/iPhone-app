@@ -92,6 +92,35 @@ function renderTable(data) {
     });
 }
 
+function renderDiy(data) {
+  const diy = data.diy;
+  if (!diy) return;
+
+  document.getElementById("diy-intro").textContent = diy.intro;
+
+  const body = document.getElementById("diy-body");
+  body.innerHTML = "";
+  diy.tiers.forEach((tier) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="power-cell">${tier.label}<br><span style="font-weight: 400; color: var(--ink-soft); font-size: 0.82rem;">${tier.note}</span></td>
+      <td>${tier.power_kwc} kWc</td>
+      <td>${EUR0.format(tier.price_min)}</td>
+      <td>${EUR0.format(tier.price_max)}</td>
+      <td>≈ ${tier.surface_m2_approx} m²</td>
+    `;
+    body.appendChild(tr);
+  });
+
+  const caveats = document.getElementById("diy-caveats");
+  caveats.innerHTML = "";
+  diy.caveats.forEach((c) => {
+    const li = document.createElement("li");
+    li.textContent = c;
+    caveats.appendChild(li);
+  });
+}
+
 function renderFactors(data) {
   const grid = document.getElementById("factor-grid");
   grid.innerHTML = "";
@@ -183,6 +212,7 @@ async function init() {
     renderHeaderDates(data);
     renderHeroStats(data);
     renderTable(data);
+    renderDiy(data);
     renderFactors(data);
     renderAides(data);
     renderSources(data);
