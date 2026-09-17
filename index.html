@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SolarCompare France — Comparateur de prix des panneaux solaires</title>
+  <meta name="description" content="Comparez le prix des panneaux solaires photovoltaïques en France : tarifs par puissance (3, 6, 9 kWc), simulateur de coût, aides et tarifs de rachat 2026, sources vérifiées." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="#top">☀️ SolarCompare<span class="dot">.fr</span></a>
+      <nav class="nav-links">
+        <a href="#simulateur">Simulateur</a>
+        <a href="#comparatif">Comparatif</a>
+        <a href="#facteurs">Facteurs de prix</a>
+        <a href="#aides">Aides &amp; rachat</a>
+        <a href="#sources">Sources</a>
+      </nav>
+      <span class="updated-pill"><span class="live-dot"></span>Mis à jour le <span id="pill-date">—</span></span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" style="border-top: none; padding-top: 56px;">
+      <div class="wrap">
+        <h1>Le prix réel des <span class="accent">panneaux solaires</span> en France, mis à jour régulièrement.</h1>
+        <p class="lead">
+          Des fourchettes de prix agrégées à partir de sources spécialisées françaises (courtiers en travaux,
+          comparateurs et installateurs RGE), pour une installation photovoltaïque résidentielle posée, TVA 5,5% incluse.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#simulateur">Estimer mon prix</a>
+          <a class="btn btn-ghost" href="#sources">Voir les sources</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="num" id="stat-3kwc">—</div>
+            <div class="label">Installation 3 kWc, pose comprise</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="stat-6kwc">—</div>
+            <div class="label">Installation 6 kWc, la plus posée par les particuliers</div>
+          </div>
+          <div class="stat-card">
+            <div class="num" id="stat-9kwc">—</div>
+            <div class="label">Installation 9 kWc, pose comprise</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="simulateur">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Simulateur</p>
+          <h2>Estimez le prix pour votre puissance</h2>
+          <p>Déplacez le curseur ou choisissez une puissance courante pour obtenir une fourchette de prix indicative.</p>
+        </div>
+
+        <div class="simulator">
+          <div class="sim-control">
+            <label for="kwc-range">Puissance de l'installation</label>
+            <div class="sim-range-row">
+              <input type="range" id="kwc-range" min="2" max="12" step="0.5" value="6" />
+              <span class="kwc-display"><span id="kwc-value">6</span> kWc</span>
+            </div>
+            <div class="sim-presets" id="sim-presets"></div>
+            <p class="sim-hint">
+              Estimation interpolée à partir des fourchettes observées pour 3, 6 et 9 kWc. En dehors de cette plage,
+              demandez plusieurs devis RGE QualiPV pour affiner le chiffrage.
+            </p>
+          </div>
+
+          <div class="sim-result">
+            <div class="range-label">Fourchette de prix estimée (TTC, pose comprise)</div>
+            <div class="range-value" id="sim-range">—</div>
+            <div class="sub-row">
+              <div>
+                Prix moyen au Wc
+                <span class="v" id="sim-per-wc">—</span>
+              </div>
+              <div>
+                Surface toiture approx.
+                <span class="v" id="sim-surface">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparatif">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Comparatif</p>
+          <h2>Prix par puissance d'installation</h2>
+          <p>Fourchettes basses / hautes observées sur le marché français pour une installation posée par un professionnel RGE.</p>
+        </div>
+
+        <div class="table-scroll">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th>Puissance</th>
+                <th>Prix bas</th>
+                <th>Prix moyen</th>
+                <th>Prix haut</th>
+                <th>€ / Wc (moyen)</th>
+                <th>Surface toiture</th>
+              </tr>
+            </thead>
+            <tbody id="compare-body">
+              <tr><td colspan="6">Chargement des données…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="facteurs">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Comprendre le prix</p>
+          <h2>Ce qui fait varier la facture</h2>
+          <p>À puissance égale, deux devis peuvent varier du simple au double selon ces critères.</p>
+        </div>
+        <div class="factor-grid" id="factor-grid"></div>
+      </div>
+    </section>
+
+    <section id="aides">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Rentabilité</p>
+          <h2>Aides et tarifs de rachat en 2026</h2>
+          <p>La réforme S21 du 5 juin 2026 a changé les règles du jeu pour les nouvelles installations.</p>
+        </div>
+        <div class="aide-grid" id="aide-grid"></div>
+      </div>
+    </section>
+
+    <section id="methodologie">
+      <div class="wrap">
+        <div class="fresh-box">
+          <h3>🔄 Comment ces données restent à jour</h3>
+          <p>
+            Ce site n'interroge pas d'API de prix en temps réel : il n'existe pas de flux public fiable de prix
+            d'installation solaire en France. Les chiffres proviennent d'une agrégation manuelle de sources
+            spécialisées, horodatée ci-dessous.
+          </p>
+          <ul>
+            <li>Toutes les fourchettes vivent dans <code>data/prices.json</code>, séparé du code de la page.</li>
+            <li>La date affichée en haut de page (<span id="fresh-date">—</span>) correspond à la dernière relecture des sources.</li>
+            <li>Pour rafraîchir le site : relire les sources ci-dessous, mettre à jour <code>data/prices.json</code>, puis redéployer — aucune autre modification n'est nécessaire.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Traçabilité</p>
+          <h2>Sources</h2>
+          <p>Chaque chiffre affiché ci-dessus est recoupé avec au moins l'une de ces sources.</p>
+        </div>
+        <ul class="sources-list" id="sources-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap foot-row">
+      <span>SolarCompare.fr — comparateur indépendant, données publiques agrégées.</span>
+      <span>Dernière mise à jour des données : <strong id="footer-date">—</strong></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
